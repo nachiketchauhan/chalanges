@@ -1,0 +1,36 @@
+<h4>Search Filters</h4>
+<div class="row" style="width: 50%;">
+
+  <div>
+    <label>Title&nbsp;&nbsp;</label>
+    <input type="text" [(ngModel)]="movieTitle" />&nbsp;&nbsp;
+
+    <label>Release Year&nbsp;&nbsp;</label>
+    <input type="text" [(ngModel)]="releaseYear" />
+  </div>
+
+</div>
+
+<br><br>
+<div  class="row">
+
+  <div *ngFor="let movie of data">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h5>{{ movie.title }}</h5>
+        <p>
+          <span style="border: 2px; border-color: black;">Release Date: {{ movie.release_date }}</span>&nbsp;&nbsp;
+          <span>Budget: {{ movie.budget }}</span>&nbsp;&nbsp;
+          <span>Duration: {{ movie.duration| mtoh}}</span>&nbsp;&nbsp;
+        </p>
+      </div>
+      <div>
+        <button style="align-items: center;">
+          <span [routerLink]="[movie.id]">Details</span>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</div>  

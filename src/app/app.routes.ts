@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { DetailComponent } from './detail/detail.component';
+import { HarryPotterMovieComponent } from './harry-potter-movie/harry-potter-movie.component';
 
 export const routes: Routes = [
-    {path: '/*', component: AppComponent},
-    {path: '/details', component: DetailComponent},
+    { path: 'harrypottermovies', component: HarryPotterMovieComponent },
+    { path: 'harrypottermovies/:movieId', component: DetailComponent },
+    { path: '**', redirectTo: 'harrypottermovies' },
 ];

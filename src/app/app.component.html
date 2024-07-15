@@ -1,24 +1,2 @@
 
-<div class="row">
-    <ul class="list-group list-group-flush">
-      <li *ngFor="let movie of data">
-        <div class="list-group list-group-flush">
-          <span href="#" class="list-group-item list-group-item-action" aria-current="true">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">{{ movie.title }}</h5>
-  
-              <small><button class="btn btn-secondary">
-                  <span [routerLink]="[movie.id]">Details</span>
-                </button></small>
-            </div>
-            <p class="mb-1">
-              <span>Release Date: {{ movie.release_date }}</span>
-              <span>Budget: {{ movie.budget  }}</span>
-              <span>Duration: {{ movie.duration}}</span>
-            </p>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
