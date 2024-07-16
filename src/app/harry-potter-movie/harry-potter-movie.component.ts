@@ -6,11 +6,14 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { GetMovieService } from '../get-movie.service';
 import { Movie } from '../movie';
 import { MtohPipe } from '../pipes/mtoh.pipe';
+import { FilterPipe } from '../filter.pipe';
+import { CurrencyPipe } from '../pipes/currency.pipe';
+
 
 @Component({
   selector: 'app-harry-potter-movie',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, RouterLink, RouterModule, FormsModule,MtohPipe],
+  imports: [HttpClientModule, CommonModule, RouterLink, RouterModule, FormsModule, MtohPipe, FilterPipe, CurrencyPipe],
   templateUrl: './harry-potter-movie.component.html',
   styleUrl: './harry-potter-movie.component.css'
 })

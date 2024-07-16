@@ -3,11 +3,12 @@ import { MovieDetails } from '../movieDetail';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetMovieService } from '../get-movie.service';
 import { MtohPipe } from '../pipes/mtoh.pipe';
+import { CurrencyPipe } from "../pipes/currency.pipe";
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [MtohPipe],
+  imports: [MtohPipe, CurrencyPipe],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.scss'
 })

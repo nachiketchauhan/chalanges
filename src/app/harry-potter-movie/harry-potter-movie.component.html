@@ -1,5 +1,5 @@
 <h4>Search Filters</h4>
-<div class="row" style="width: 50%;">
+<div class="row" >
 
   <div>
     <label>Title&nbsp;&nbsp;</label>
@@ -12,9 +12,29 @@
 </div>
 
 <br><br>
-<div  class="row">
 
-  <div *ngFor="let movie of data">
+<table>
+  <tr>
+    <th>Harry potter Movielist</th>
+    
+  </tr>
+    <tr *ngFor="let movie of data| filter : movieTitle : releaseYear">
+      <th> <h5>{{ movie.title }}</h5>
+        <p>
+          <span style="border: 2px; border-color: black;">Release Date: {{ movie.release_date }}</span>&nbsp;&nbsp;
+          <span>Budget: {{ movie.budget | doller }}</span>&nbsp;&nbsp;
+          <span>Duration: {{ movie.duration| mtoh}}</span>&nbsp;&nbsp;
+        </p></th>
+      <th> <button style="align-items: center; background-color: rgb(71, 172, 202); color: aliceblue;">
+        <span [routerLink]="[movie.id]">Details</span>
+      </button>
+</th>
+    </tr>
+ 
+  </table>
+<!-- <div  class="row">
+
+  <div *ngFor="let movie of data| filter : movieTitle : releaseYear" >
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div style="padding-right: 60px;">
         <h5>{{ movie.title }}</h5>
@@ -33,4 +53,4 @@
     </div>
 
   </div>
-</div>  
+</div>   -->
