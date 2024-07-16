@@ -16,11 +16,11 @@
 
   <div *ngFor="let movie of data">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div>
+      <div style="padding-right: 60px;">
         <h5>{{ movie.title }}</h5>
         <p>
           <span style="border: 2px; border-color: black;">Release Date: {{ movie.release_date }}</span>&nbsp;&nbsp;
-          <span>Budget: {{ movie.budget }}</span>&nbsp;&nbsp;
+          <span>Budget: {{ movie.budget |currency}}</span>&nbsp;&nbsp;
           <span>Duration: {{ movie.duration| mtoh}}</span>&nbsp;&nbsp;
         </p>
       </div>
