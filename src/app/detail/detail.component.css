@@ -1,7 +1,6 @@
-.centerAlign{
-    text-align: center;
-}
 
-.cursorpointer{
-    cursor: pointer;
+
+table {
+   
+    overflow: hidden !important;
 }

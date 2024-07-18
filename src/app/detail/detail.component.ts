@@ -4,11 +4,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GetMovieService } from '../get-movie.service';
 import { MtohPipe } from '../pipes/mtoh.pipe';
 import { CurrencyPipe } from "../pipes/currency.pipe";
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [MtohPipe, CurrencyPipe],
+  imports: [MtohPipe, CurrencyPipe,MatIconModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.scss'
 })

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MovieDetails } from './movieDetail';
+import { Movie } from './movie';
 
 
 @Injectable({
@@ -10,12 +11,12 @@ import { MovieDetails } from './movieDetail';
 export class GetMovieService {
  
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {   
     
   }
-  getMoviesList(): Observable<any[]> {
+  getMoviesList(): Observable<Movie[]> {
     return this.http
-      .get<any[]>('movies');
+      .get<Movie[]>('movies');
   }
 
   getMovieById(movieId: string): Observable<MovieDetails> {

@@ -1,41 +1,43 @@
-<button class="list-group-item cursorpointer" type="button" href="#" (click)="backToHome()">
-  <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Back
+<button type="button" href="#" (click)="backToHome()">
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  Back
 </button>
 <div class="row">
-  <h4>{{ movie.title }}</h4>
+  <h4 style="padding-left: 50px; padding-top: 20px;"><b>{{ movie.title }}</b></h4>
   <div class="row">
     <div class="col-sm-3">
       <img alt="Movie poster" src="{{ movie.poster }}" />
     </div>
-    <div class="col-md-9"><b>Summary : </b>{{ movie.summary }}</div>
-  </div>
-  <div class="row">
-    <span>
-      <h3 class="centerAlign">Details</h3>
-    </span>
-    <table class="table table-bordered">
-      <tbody>
-        <tr>
-          <td class="table-active fw-bold">Box Office</td>
-          <td>{{ movie.box_office | doller}}</td>
-        </tr>
-        <tr>
-          <td class="table-active fw-bold">Budget</td>
-          <td>{{ movie.budget | doller }}</td>
-        </tr>
-        <tr>
-          <td class="table-active fw-bold">Duration</td>
-          <td>{{ movie.duration | mtoh }}</td>
-        </tr>
-        <tr>
-          <td class="table-active fw-bold">Producers</td>
-          <td>{{ movie.producers }}</td>
-        </tr>
-        <tr>
-          <td class="table-active fw-bold">Cinematographers</td>
-          <td>{{ movie.cinematographers }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="col-md-9" style="width: 100% ; height: 100%;"><b><u> Summary : </u></b>{{ movie.summary }}
+    
+     
+        <h3 ><b><u>Details</u></b></h3>
+     
+    
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td class="table-active fw-bold">Box Office</td>
+            <td>{{ movie.box_office | doller}}</td>
+          </tr>
+          <tr>
+            <td class="table-active fw-bold">Budget</td>
+            <td>{{ movie.budget | doller }}</td>
+          </tr>
+          <tr>
+            <td class="table-active fw-bold">Duration</td>
+            <td>{{ movie.duration | mtoh }}</td>
+          </tr>
+          <tr>
+            <td class="table-active fw-bold">Producers</td>
+            <td>{{ movie.producers }}</td>
+          </tr>
+          <tr>
+            <td class="table-active fw-bold">Cinematographers</td>
+            <td>{{ movie.cinematographers }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

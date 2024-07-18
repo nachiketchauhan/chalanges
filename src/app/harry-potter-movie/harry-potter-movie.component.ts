@@ -6,7 +6,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { GetMovieService } from '../get-movie.service';
 import { Movie } from '../movie';
 import { MtohPipe } from '../pipes/mtoh.pipe';
-import { FilterPipe } from '../filter.pipe';
+import { FilterPipe } from '../pipes/filter.pipe';
 import { CurrencyPipe } from '../pipes/currency.pipe';
 
 
